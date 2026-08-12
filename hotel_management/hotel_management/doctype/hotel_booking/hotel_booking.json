@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-31 10:21:21.454403",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_booking_section",
+  "naming_series",
+  "room_id",
+  "room_type",
+  "no_of_person",
+  "booked_from",
+  "date_and_time_of_vacate",
+  "payment_received",
+  "column_break_zvzw",
+  "person_name",
+  "aadhaar_number",
+  "phone_number",
+  "initial_amount_paid",
+  "employee_attended_section",
+  "employee_id",
+  "date_and_time_of_registration"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_booking_section",
+   "fieldtype": "Section Break",
+   "label": "Room Booking"
+  },
+  {
+   "default": "book-.DD.MM.YY.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "not_nullable": 1,
+   "options": "book-.DD.MM.YY.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_id",
+   "fieldtype": "Data",
+   "label": "Room ID",
+   "not_nullable": 1
+  },
+  {
+   "default": "Single Bedroom",
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Beach View\nSingle Bedroom\nDouble Bedroom\nBalcony"
+  },
+  {
+   "default": "1",
+   "fieldname": "no_of_person",
+   "fieldtype": "Select",
+   "label": "No of person",
+   "options": "1\n2\n3\n4"
+  },
+  {
+   "fieldname": "booked_from",
+   "fieldtype": "Datetime",
+   "label": "Booked From"
+  },
+  {
+   "fieldname": "date_and_time_of_vacate",
+   "fieldtype": "Datetime",
+   "label": "Date and Time of Vacate"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_received",
+   "fieldtype": "Check",
+   "label": "Payment Received"
+  },
+  {
+   "fieldname": "column_break_zvzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "initial_amount_paid",
+   "fieldtype": "Currency",
+   "label": "Initial amount Paid"
+  },
+  {
+   "fieldname": "employee_attended_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Attended"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "date_and_time_of_registration",
+   "fieldtype": "Datetime",
+   "label": "Date and Time of Registration"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-07-31 15:38:52.661592",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Hotel-Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_name_in_global_search": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Viewed"
+  },
+  {
+   "color": "Yellow",
+   "title": "Confirmation Pending"
+  },
+  {
+   "color": "Green",
+   "title": "Booked"
+  }
+ ],
+ "title_field": "person_name"
+}

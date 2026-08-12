@@ -12,6 +12,18 @@ use_json_request_body = True
 # Apps
 # ------------------
 
+
+app_include_js = "sample_asset_bundler_test.bundle.js"
+#app_include_js = "hotel_management.bundle.js"
+#app_include_css = "hotel_management.bundle.css"
+
+
+doc_events = {
+    "ToDo": {
+        "validate": "hotel_management.api.Sample_Test_logic"
+    }
+}
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
