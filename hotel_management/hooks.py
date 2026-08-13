@@ -24,6 +24,12 @@ doc_events = {
     }
 }
 
+scheduler_events = {
+    "daily": [
+        "hotel_management.tasks.daily_maintenance"
+    ]
+}
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
