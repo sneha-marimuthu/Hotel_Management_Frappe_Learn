@@ -20,7 +20,7 @@ app_include_js = "sample_asset_bundler_test.bundle.js"
 
 doc_events = {
     "ToDo": {
-        "validate": "hotel_management.api.Sample_Test_logic"
+        "validate": "hotel_management.api_sample.Sample_Test_logic"
     }
 }
 
