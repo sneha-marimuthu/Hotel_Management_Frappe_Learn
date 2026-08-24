@@ -3,9 +3,9 @@
 
 # import frappe
 from frappe.model.document import Document
-import frappe
 
-class HotelEmployee(Document):
+
+class HotelContact(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,10 +14,9 @@ class HotelEmployee(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		age: DF.Int
-		email: DF.Data | None
-		employee_name: DF.Data
-		salary: DF.Int
+		name1: DF.Data | None
+		phone_number: DF.Phone | None
+		type: DF.Literal["Employee", "Customer"]
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Hotel Employee"
+	_DOCTYPE_NAME = "Hotel Contact"

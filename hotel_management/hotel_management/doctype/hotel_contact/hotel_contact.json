@@ -2,52 +2,41 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "field:employee_name",
- "creation": "2026-08-06 10:57:12.455182",
+ "autoname": "UUID",
+ "creation": "2026-08-14 16:14:11.087410",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "employee_name",
-  "age",
-  "email",
-  "salary"
+  "name1",
+  "phone_number",
+  "type"
  ],
  "fields": [
   {
-   "fieldname": "employee_name",
+   "fieldname": "name1",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Employee Name",
-   "reqd": 1,
-   "unique": 1
+   "label": "Name"
   },
   {
-   "fieldname": "age",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Age",
-   "reqd": 1
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
   },
   {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "salary",
-   "fieldtype": "Int",
-   "label": "Salary"
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Employee\nCustomer"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-19 17:01:20.491080",
+ "modified": "2026-08-14 16:15:42.361743",
  "modified_by": "Administrator",
  "module": "Hotel Management",
- "name": "Hotel Employee",
- "naming_rule": "By fieldname",
+ "name": "Hotel Contact",
+ "naming_rule": "UUID",
  "owner": "Administrator",
  "permissions": [
   {
