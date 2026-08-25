@@ -1,35 +1,14 @@
-<style>
-    .report-table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .report-table th {
-        background-color: #2793ff;
-        color: white;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .report-table td {
-        padding: 8px;
-        border: 1px solid #aa4747;
-    }
-
-    .report-table tr:nth-child(even) {
-        background-color: #1f0909;
-    }
-
-    .report-table tr:hover {
-        background-color: #e8f4ff;
-    }
-</style>
 
 
 <div>
     <div>
         <h2>Employee Summary</h2>
         <p> Generated on <%= dateutil.str_to_user(frappe.datetime.get_today()) %></p>
+
+            <p>
+                Age:
+                <strong><%= filters.age %></strong>
+            </p>
     </div>
     <table class="report-table">
         <thead>
