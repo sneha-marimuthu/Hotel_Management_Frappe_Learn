@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ul>
+    {% for user in user_list %}
+    <li>{{ user.employee_name }} - {{ user.email }}</li>
+    {% endfor %}
+</ul>

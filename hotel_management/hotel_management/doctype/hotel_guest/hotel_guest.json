@@ -2,41 +2,48 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "field:name1",
- "creation": "2026-08-14 16:14:11.087410",
+ "autoname": "field:guest_name",
+ "creation": "2026-08-27 12:03:27.605973",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "phone_number",
-  "type"
+  "guest_name",
+  "phone",
+  "status",
+  "room_number"
  ],
  "fields": [
   {
-   "fieldname": "phone_number",
-   "fieldtype": "Phone",
-   "label": "Phone Number"
-  },
-  {
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "Employee\nClient"
-  },
-  {
-   "fieldname": "name1",
+   "fieldname": "guest_name",
    "fieldtype": "Data",
-   "label": "Name",
+   "label": "Guest Name",
    "unique": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Checked In\nChecked Out"
+  },
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Link",
+   "label": "Room Number",
+   "options": "Hotel Room"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-31 11:27:47.498039",
+ "modified": "2026-09-01 16:41:23.108124",
  "modified_by": "Administrator",
  "module": "Hotel Management",
- "name": "Hotel Contact",
+ "name": "Hotel Guest",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

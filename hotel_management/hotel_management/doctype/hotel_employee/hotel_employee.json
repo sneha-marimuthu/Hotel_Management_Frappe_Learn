@@ -1,5 +1,16 @@
 {
- "actions": [],
+ "actions": [
+  {
+   "action": "hotel_management.api_sample.mark_employee_on_leave",
+   "action_type": "Server Action",
+   "label": "Leave Apply"
+  },
+  {
+   "action": "Form/Hotel Booking/new",
+   "action_type": "Route",
+   "label": "Book"
+  }
+ ],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
  "autoname": "field:employee_name",
@@ -11,7 +22,9 @@
   "employee_name",
   "age",
   "email",
-  "salary"
+  "salary",
+  "leave",
+  "guest"
  ],
  "fields": [
   {
@@ -38,12 +51,31 @@
    "fieldname": "salary",
    "fieldtype": "Int",
    "label": "Salary"
+  },
+  {
+   "default": "No",
+   "fieldname": "leave",
+   "fieldtype": "Select",
+   "label": "Leave",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Hotel Guest"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-08-19 17:01:20.491080",
+ "links": [
+  {
+   "link_doctype": "Hotel-Booking",
+   "link_fieldname": "employee_id"
+  }
+ ],
+ "modified": "2026-08-27 14:30:08.063441",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Hotel Employee",

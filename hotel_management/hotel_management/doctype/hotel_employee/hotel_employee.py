@@ -17,7 +17,11 @@ class HotelEmployee(Document):
 		age: DF.Int
 		email: DF.Data | None
 		employee_name: DF.Data
+		guest: DF.Link | None
+		leave: DF.Literal["Yes", "No"]
 		salary: DF.Int
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "Hotel Employee"
+
+	

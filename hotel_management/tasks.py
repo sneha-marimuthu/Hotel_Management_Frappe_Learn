@@ -1,6 +1,7 @@
 import frappe
 from frappe.utils import now
 
+@frappe.whitelist(allow_guest=True)
 def daily_maintenance():
     
     frappe.log_error(

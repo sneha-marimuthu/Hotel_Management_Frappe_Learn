@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class HotelContact(Document):
+class GuestDetail(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,9 +14,11 @@ class HotelContact(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		name1: DF.Data | None
-		phone_number: DF.Phone | None
-		type: DF.Literal["Employee", "Client"]
+		comment: DF.Text | None
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
+		phone: DF.Phone | None
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Hotel Contact"
+	_DOCTYPE_NAME = "Guest Detail"

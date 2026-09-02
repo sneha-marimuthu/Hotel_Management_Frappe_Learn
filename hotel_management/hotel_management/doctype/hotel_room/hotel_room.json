@@ -1,0 +1,100 @@
+{
+ "actions": [
+  {
+   "action": "hotel_management.api_sample.room_availability_check",
+   "action_type": "Server Action",
+   "label": "Availability"
+  }
+ ],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:room_no",
+ "creation": "2026-08-28 16:29:10.213214",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_no",
+  "type",
+  "guest_occupied",
+  "price",
+  "is_cleaned",
+  "is_available"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room No",
+   "not_nullable": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Beach View\nSingle Bedroom\nDouble Bedroom\nBalcony",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_cleaned",
+   "fieldtype": "Check",
+   "label": "Is Cleaned?"
+  },
+  {
+   "fieldname": "guest_occupied",
+   "fieldtype": "Link",
+   "label": "Occupied Guest",
+   "options": "Hotel Guest"
+  },
+  {
+   "default": "0",
+   "fetch_from": "guest_occupied.status",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Is Available"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Hotel-Booking",
+   "link_fieldname": "room_id"
+  }
+ ],
+ "modified": "2026-09-01 16:59:58.357245",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Hotel Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
